@@ -1,0 +1,14 @@
+@mixin defaultSet($height) {
+    @if $height>0 {
+        height: $height;
+    }
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@mixin setLayout($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

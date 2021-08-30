@@ -1,0 +1,119 @@
+@import "variables";
+@import "globalFunctions";
+* {
+    @include defaultSet(100%);
+}
+
+.textDefault {
+    color: white;
+}
+
+body {
+    @include defaultSet(100%);
+    height: auto;
+    @include setLayout(column, center, center);
+    font-family: 'Georama';
+    // overflow-y: visible;
+}
+
+#panel_image {
+    @include defaultSet(100vh);
+    @include setLayout(column, center, center);
+    background-image: url('/images/main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#panel_image>header {
+    min-height: 10vh;
+    height: 10vh;
+    border-bottom: 1px solid $colorBar;
+    background-attachment: fixed;
+}
+
+#panel_image>main {
+    @include setLayout(column,
+    center,
+    center);
+    height: 90vh;
+    min-height: 90vh;
+    color: white;
+}
+
+main {
+    @include setLayout(column,
+    center,
+    center);
+    font-family: Georama;
+}
+
+main>h1 {
+    font-size: 5rem;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+main>button {
+    color: white;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid $colorTheme;
+    border-radius: 10px;
+}
+
+header>#navigation {
+    width: 100%;
+    height: 50px;
+    // border-bottom: 0px solid $colorBar;
+}
+
+.nav-item {
+    color: $colorBar;
+}
+
+#log {
+    width: 50px;
+}
+
+a.nav-link {
+    color: $colorBar;
+}
+
+#foodCarousel {
+    width: 100%;
+    height: 600px;
+    background-color: black;
+}
+
+.sectionIntermediate>.card {
+    background-color: black;
+    color: white;
+}
+
+.card-body img {
+    height: 400px;
+    width: 400px;
+}
+
+
+/*
+ *  STYLE 14
+ */
+
+#bodyId::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+    background-color: #CCCCCC;
+}
+
+#bodyId::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+#bodyId::-webkit-scrollbar-thumb {
+    background-color: #FFF;
+    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 25%, transparent 100%, rgba(0, 0, 0, 1) 75%, transparent)
+}
